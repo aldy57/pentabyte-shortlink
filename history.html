@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riwayat Tautan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="website icon" type="png" href="https://services.pentabyte.vip/images/pentabyte_newlogo.png">
+    <link rel="stylesheet" href="./assets/css/history.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="./history.html" class="navbar-logo">Pemendek URL</a>
+        <ul class="navbar-links">
+            <li><a href="./index.html" class="btn">Kembali</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="header">
+            <h1>Riwayat Tautan</h1>
+            <button id="clear-history-btn" class="btn-danger">Hapus Semua Riwayat</button>
+        </div>
+
+        <div class="table-wrapper">
+            <table class="history-table">
+                <thead>
+                    <tr>
+                        <th>URL Asli</th>
+                        <th>URL Pendek</th>
+                        <th>Tanggal</th>
+                    </tr>
+                </thead>
+                <tbody id="history-body"></tbody>
+            </table>
+            <div id="no-history-msg" class="no-history" style="display: none;">
+                <p>Belum ada riwayat tautan yang tersimpan.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup-overlay" id="confirm-popup">
+        <div class="popup-box">
+            <h2>PERINGATAN</h2>
+            <p>Apakah Anda yakin ingin menghapus semua riwayat? Tindakan ini tidak dapat diurungkan.</p>
+            <div class="popup-actions">
+                <button class="popup-btn cancel" data-target="confirm-popup">Batal</button>
+                <button id="confirm-delete-btn" class="popup-btn confirm">Hapus</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup-overlay" id="success-popup">
+        <div class="popup-box">
+            <h2 id="success-message">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                Riwayat Dihapus
+            </h2>
+             <div class="popup-actions">
+                <button class="popup-btn cancel" data-target="success-popup">Tutup</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/history.js"></script>
+</body>
+</html>
